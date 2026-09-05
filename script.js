@@ -39,6 +39,24 @@ const MENU = {
       { n: 'Sándwiches (opción vegetariana disponible)', v: 1 },
       { n: 'Ensaladas' },
     ]}]
+  },
+  te: {
+    label: 'Té e Infusiones',
+    /* Único rubro con precios 100% confirmados: fotografiados directo
+       de la pizarra de precios del local el 05-09-2026. */
+    table: true,
+    sizes: ['S · 200ml', 'M · 300ml', 'L · 400ml', 'XL · 500ml'],
+    rows: [
+      ['Té Chai', 1850, 1950, 2150, 2350],
+      ['Té Negro', 1750, 1850, 2050, 2250],
+      ['Té Blanco', 1750, 1850, 2050, 2250],
+      ['Té Rojo', 1750, 1850, 2050, 2250],
+      ['Té Oolong', 1750, 1850, 2050, 2250],
+      ['Té Jazmín', 1750, 1850, 2050, 2250],
+      ['Té Verde', 1750, 1850, 2050, 2250],
+      ['Matcha Latte', 2400, 2550, 2950, 3150],
+      ['Chai Latte', 2200, 2450, 2700, 3050],
+    ]
   }
 };
 
@@ -59,6 +77,33 @@ catKeys.forEach((key, i) => {
   const panel = document.createElement('div');
   panel.className = 'menu-panel' + (i===0 ? ' active':'');
   panel.id = 'panel-' + key;
+
+  if(MENU[key].table){
+    const hint = document.createElement('p');
+    hint.className = 'price-table-hint';
+    hint.textContent = 'Desliza para ver todos los tamaños →';
+    panel.appendChild(hint);
+    const wrap = document.createElement('div');
+    wrap.className = 'price-table-wrap';
+    const table = document.createElement('table');
+    table.className = 'price-table';
+    const thead = document.createElement('tr');
+    thead.innerHTML = '<th></th>' + MENU[key].sizes.map(s => `<th>${s}</th>`).join('');
+    table.appendChild(thead);
+    MENU[key].rows.forEach(row => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td class="name">${row[0]}</td>` + row.slice(1).map(p => `<td class="mono">${money(p)}</td>`).join('');
+      table.appendChild(tr);
+    });
+    wrap.appendChild(table);
+    panel.appendChild(wrap);
+    const note = document.createElement('p');
+    note.className = 'menu-note';
+    note.textContent = 'Precios confirmados en el local (pizarra de tés) — el único rubro de la carta con tarifa oficial.';
+    panel.appendChild(note);
+    panelsEl.appendChild(panel);
+    return;
+  }
 
   MENU[key].groups.forEach(group => {
     if(group.title && MENU[key].groups.length > 1){

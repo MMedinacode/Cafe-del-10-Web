@@ -16,14 +16,25 @@
      - Teléfono +56 9 8794 6659 real (registrado en Maps), pero NO
        confirmado si tiene WhatsApp activo — placeholder marcado.
      - Sin sitio web propio (cafedel10.cl expiró, hoy redirige a un
-       aviso de dominio de Wix) ni app de delivery confirmada.
-     - Sin carta con precios confirmada (no hay PDF ni menú online con
-       tarifas) — se muestran solo nombres reales de platos/categorías,
-       marcados "Consultar precio en el local", nada inventado.
+       aviso de dominio de Wix).
+     - Delivery confirmado: tienen Rappi (link real de su local, abierto,
+       Lun-Vie 9:00-16:00) — botón agregado en Visítanos.
+     - Tarjeta de fidelización real confirmada (plataforma WelcomeBack,
+       gratis, con beneficios/descuentos exclusivos) — link real dado
+       por el dueño, agregado como banner en Inicio y en Visítanos.
+     - Sin carta con precios confirmada para café/pastelería/sándwiches
+       (no hay PDF ni menú online con tarifas) — se muestran solo
+       nombres reales de platos/categorías, marcados "Consultar precio
+       en el local", nada inventado.
+     - EXCEPCIÓN: la carta de Té e Infusiones SÍ tiene precios reales
+       confirmados (foto de la pizarra del local, 05-09-2026) — se
+       muestra la tabla completa S/M/L/XL en la pestaña Carta.
      - Precio de las salas de reunión: una fuente de prensa antigua
        mencionaba ~$8.000/hora, pero no se pudo confirmar vigente, así
        que se omite y se deriva a contacto directo.
-     Fotos reales: 3 fotos + logo, sacadas de Instagram @cafe10.cl.
+     Fotos reales: logo vectorial + 8 fotos reales del local (barra,
+     vitrina, interior día/noche, desayuno, postre), varias sacadas de
+     Google Maps y las que el dueño mandó directamente el 05-09-2026.
      ============================================================ -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,12 +44,12 @@
 </head>
 <body>
 
-<div id="loader"><img src="fotos/logo.jpg" alt=""></div>
+<div id="loader"><img src="fotos/logo.png" alt=""></div>
 
 <nav class="nav">
   <div class="nav-inner">
     <a href="#" class="nav-brand" data-tab="inicio">
-      <img class="logo-mark" src="fotos/logo.jpg" alt="Logo Café del 10">
+      <img class="logo-mark" src="fotos/logo.png" alt="Logo Café del 10">
       <strong>Café del 10</strong>
     </a>
     <ul class="nav-links" id="navLinks">
@@ -62,9 +73,9 @@
 <section id="tab-inicio" class="tab-panel active" data-tab-panel="inicio">
 <section class="hero" id="top">
   <div class="bg-photo">
-    <img src="fotos/barra-cafe.jpg" alt="Barra de café en Café del 10">
+    <img src="fotos/maquina-espresso.jpg" alt="Máquina de espresso en la barra de Café del 10">
   </div>
-  <img class="logo-mark hero-mark" src="fotos/logo.jpg" alt="Logo Café del 10">
+  <img class="logo-mark hero-mark" src="fotos/logo.png" alt="Logo Café del 10">
   <span class="eyebrow">Cafetería de especialidad · Santiago Centro</span>
   <h1>Un <em>pedacito de Nueva York</em> a pasos de La Moneda</h1>
   <p class="tagline">Café tostado propio, pastelería francesa y belga, y una antigua notaría familiar reconvertida en el rincón favorito del barrio para hacer una pausa — o una reunión de verdad.</p>
@@ -76,6 +87,16 @@
   <div class="cta-row">
     <button class="btn btn-solid" data-tab="carta">Ver la carta</button>
     <button class="btn btn-outline" data-tab="salas">Salas de reunión</button>
+  </div>
+</section>
+<section class="loyalty-band">
+  <div class="wrap loyalty-inner">
+    <div class="loyalty-copy">
+      <span class="eyebrow">tarjeta de fidelización · gratis</span>
+      <h3>Únete y junta beneficios exclusivos</h3>
+      <p>Descarga tu tarjeta digital de Café del 10 — es gratuita — y accede a descuentos y promociones solo para socios cada vez que nos visites.</p>
+    </div>
+    <a class="btn btn-solid" href="https://app.welcomeback.io/c/2b4cc1f5-1a65-4b1a-b29a-f51e573b55f6" target="_blank" rel="noopener">Quiero mi tarjeta gratis</a>
   </div>
 </section>
 </section>
@@ -106,9 +127,10 @@
       <h2>El local</h2>
     </div>
     <div class="gallery-grid">
-      <figure><img src="fotos/barra-cafe.jpg" alt="Barra de café con máquina espresso"><div class="gallery-tag">Nuestra barra</div></figure>
-      <figure><img src="fotos/vitrina.jpg" alt="Vitrina de pastelería"><div class="gallery-tag">Vitrina del día</div></figure>
-      <figure><img src="fotos/lifestyle-hoodie.jpg" alt="Polerón Café del 10"><div class="gallery-tag">Hot &amp; fresh coffee</div></figure>
+      <figure><img src="fotos/interior-dia.jpg" alt="Interior de Café del 10, muro de ladrillo a la vista"><div class="gallery-tag">Nuestro ambiente</div></figure>
+      <figure><img src="fotos/vitrina-2.jpg" alt="Vitrina de pastelería con macarons, tortas y hojaldres"><div class="gallery-tag">Vitrina del día</div></figure>
+      <figure><img src="fotos/desayuno.jpg" alt="Desayuno con pan, palta, huevos revueltos, jugo y cappuccino"><div class="gallery-tag">Desayuno completo</div></figure>
+      <figure><img src="fotos/postre-cafe.jpg" alt="Torta de chocolate y dos cafés"><div class="gallery-tag">Postres y buena compañía</div></figure>
     </div>
   </div>
 </section>
@@ -129,7 +151,10 @@
 </section>
 
 <section id="tab-salas" class="tab-panel" data-tab-panel="salas">
-<section id="salas" style="background:linear-gradient(180deg, #241f1a, var(--ink)); color:#fff;">
+<section id="salas" class="salas-bg" style="color:#fff;">
+  <div class="bg-photo salas-photo">
+    <img src="fotos/interior-noche.jpg" alt="Interior de Café del 10 de noche">
+  </div>
   <div class="wrap">
     <div class="section-head dark">
       <span class="eyebrow">además del café</span>
@@ -228,11 +253,16 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
             oficinas@cafedel10.cl
           </a>
+          <a class="contact-pill" href="https://app.welcomeback.io/c/2b4cc1f5-1a65-4b1a-b29a-f51e573b55f6" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0L12 5.34l-.77-.76a5.4 5.4 0 0 0-7.65 7.65l.77.77L12 20.65l7.65-7.65.77-.77a5.4 5.4 0 0 0 0-7.65z"/></svg>
+            Tarjeta de fidelización
+          </a>
         </div>
       </div>
       <div class="cta-row" style="justify-content:flex-start;">
         <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&destination=Morand%C3%A9+243,+Santiago&destination_place_id=0x9662c5a425a40409:0xfd4a169d0e39bc5c" target="_blank" rel="noopener">Cómo llegar</a>
         <a class="btn btn-outline" style="border-color:rgba(255,255,255,0.5); color:#fff;" href="https://waze.com/ul?q=Morand%C3%A9%20243%2C%20Santiago&navigate=yes" target="_blank" rel="noopener">Ir con Waze</a>
+        <a class="btn btn-outline" style="border-color:rgba(255,255,255,0.5); color:#fff;" href="https://www.rappi.cl/restaurantes/900087445-cafe-del-10" target="_blank" rel="noopener">Pedir por Rappi</a>
       </div>
     </div>
     <div class="map-frame">
@@ -246,7 +276,7 @@
 
 <footer class="site-footer">
   <div class="footer-inner">
-    <img class="logo-mark footer-mark" src="fotos/logo.jpg" alt="Logo Café del 10">
+    <img class="logo-mark footer-mark" src="fotos/logo.png" alt="Logo Café del 10">
     <p class="footer-tag">Cafetería de especialidad · Santiago Centro, desde 2006</p>
     <p class="footer-contact">Morandé 243, Santiago · <a href="mailto:oficinas@cafedel10.cl">oficinas@cafedel10.cl</a></p>
     <div class="footer-badges">
