@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Café del 10 — Cafetería en Santiago Centro</title>
+
+<!-- ============================================================
+     PROTOTIPO BETA — CAFÉ DEL 10
+     Datos verificados en Google Maps, Instagram (@cafe10.cl) y
+     prensa (pousta.com) el 05-09-2026: dirección, horario, teléfono,
+     rating, reseñas, historia del local y mapa/Place ID real (CID
+     verificado en vivo: 0x9662c5a425a40409:0xfd4a169d0e39bc5c — el
+     Place ID entregado por Apify no se usó tal cual sin confirmar).
+     PENDIENTE:
+     - Teléfono +56 9 8794 6659 real (registrado en Maps), pero NO
+       confirmado si tiene WhatsApp activo — placeholder marcado.
+     - Sin sitio web propio (cafedel10.cl expiró, hoy redirige a un
+       aviso de dominio de Wix) ni app de delivery confirmada.
+     - Sin carta con precios confirmada (no hay PDF ni menú online con
+       tarifas) — se muestran solo nombres reales de platos/categorías,
+       marcados "Consultar precio en el local", nada inventado.
+     - Precio de las salas de reunión: una fuente de prensa antigua
+       mencionaba ~$8.000/hora, pero no se pudo confirmar vigente, así
+       que se omite y se deriva a contacto directo.
+     Fotos reales: 3 fotos + logo, sacadas de Instagram @cafe10.cl.
+     ============================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;0,700;1,500;1,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="loader"><img src="fotos/logo.jpg" alt=""></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-brand" data-tab="inicio">
+      <img class="logo-mark" src="fotos/logo.jpg" alt="Logo Café del 10">
+      <strong>Café del 10</strong>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><button class="nav-link active" data-tab="inicio">Inicio</button></li>
+      <li><button class="nav-link" data-tab="nosotros">Nosotros</button></li>
+      <li><button class="nav-link" data-tab="carta">Carta</button></li>
+      <li><button class="nav-link" data-tab="salas">Salas de Reunión</button></li>
+      <li><button class="nav-link" data-tab="resenas">Reseñas</button></li>
+      <li><button class="nav-link" data-tab="visitanos">Visítanos</button></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="cart-btn" id="cartBtn">Pedido <span class="cart-count" id="cartCount">0</span></button>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main id="main-content">
+<section id="tab-inicio" class="tab-panel active" data-tab-panel="inicio">
+<section class="hero" id="top">
+  <div class="bg-photo">
+    <img src="fotos/barra-cafe.jpg" alt="Barra de café en Café del 10">
+  </div>
+  <img class="logo-mark hero-mark" src="fotos/logo.jpg" alt="Logo Café del 10">
+  <span class="eyebrow">Cafetería de especialidad · Santiago Centro</span>
+  <h1>Un <em>pedacito de Nueva York</em> a pasos de La Moneda</h1>
+  <p class="tagline">Café tostado propio, pastelería francesa y belga, y una antigua notaría familiar reconvertida en el rincón favorito del barrio para hacer una pausa — o una reunión de verdad.</p>
+  <div class="hero-info">
+    <div class="hero-pill"><span class="status-dot" id="statusDot"></span> <span id="statusText">Consultando horario…</span></div>
+    <div class="hero-pill">★ <strong>4.2</strong> (649 opiniones)</div>
+    <div class="hero-pill"><strong>Morandé 243</strong>, Santiago Centro</div>
+  </div>
+  <div class="cta-row">
+    <button class="btn btn-solid" data-tab="carta">Ver la carta</button>
+    <button class="btn btn-outline" data-tab="salas">Salas de reunión</button>
+  </div>
+</section>
+</section>
+
+<section id="tab-nosotros" class="tab-panel" data-tab-panel="nosotros">
+<section id="nosotros">
+  <div class="wrap sobre">
+    <span class="eyebrow" style="color:var(--oxblood);">quiénes somos</span>
+    <h2 style="margin-bottom:20px;">Una notaría familiar, reconvertida con alma de café</h2>
+    <p>Café del 10 abrió sus puertas en febrero de 2006, cuando el arquitecto Felipe Diez transformó la antigua notaría de su familia en un punto de encuentro para los oficinistas del centro de Santiago. A pocos metros de la Plaza de la Constitución, el local tiene esa sensación de cafetería neoyorquina: gente mirando hacia la calle, otros con laptop o en plena entrevista de trabajo, cada uno a lo suyo pero compartiendo el mismo espacio con alma. Hoy Rocío Carvajal está a cargo de que todo funcione con la misma cercanía de siempre.</p>
+    <p>El grano se tuesta con no más de una semana de anticipación, con ese perfil que busca el paladar chileno. Hay opciones de leche sin lactosa, de soya y de arroz, y la pastelería —de línea francesa y belga— también piensa en todos: queques veganos, pasteles sin azúcar y un carrot cake sin gluten conviven con las medialunas y sándwiches de siempre.</p>
+    <div class="badges-row">
+      <span class="badge badge-a">Abierto desde 2006</span>
+      <span class="badge badge-a">Tostado propio</span>
+      <span class="badge badge-b">Opciones veganas</span>
+      <span class="badge badge-b">Sin azúcar y sin gluten</span>
+      <span class="badge badge-b">WiFi y enchufes en cada mesa</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><span class="mark">·10·</span></div>
+
+<section style="background:var(--ink); color:#fff;">
+  <div class="wrap">
+    <div class="section-head dark">
+      <span class="eyebrow">para chusmear</span>
+      <h2>El local</h2>
+    </div>
+    <div class="gallery-grid">
+      <figure><img src="fotos/barra-cafe.jpg" alt="Barra de café con máquina espresso"><div class="gallery-tag">Nuestra barra</div></figure>
+      <figure><img src="fotos/vitrina.jpg" alt="Vitrina de pastelería"><div class="gallery-tag">Vitrina del día</div></figure>
+      <figure><img src="fotos/lifestyle-hoodie.jpg" alt="Polerón Café del 10"><div class="gallery-tag">Hot &amp; fresh coffee</div></figure>
+    </div>
+  </div>
+</section>
+</section>
+
+<section id="tab-carta" class="tab-panel" data-tab-panel="carta">
+<section id="carta" style="background:var(--paper);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">la carta</span>
+      <h2>Nuestra carta</h2>
+    </div>
+    <div class="menu-tabs" id="menuTabs"></div>
+    <div id="menuPanels"></div>
+    <p class="menu-note">Los precios se consultan directo en el local — todavía no tenemos una carta con tarifas confirmadas para mostrar acá.</p>
+  </div>
+</section>
+</section>
+
+<section id="tab-salas" class="tab-panel" data-tab-panel="salas">
+<section id="salas" style="background:linear-gradient(180deg, #241f1a, var(--ink)); color:#fff;">
+  <div class="wrap">
+    <div class="section-head dark">
+      <span class="eyebrow">además del café</span>
+      <h2>6 salas de reunión, segundo piso</h2>
+    </div>
+    <p class="salas-intro">No todos lo saben, pero arriba de la cafetería hay seis salas privadas pensadas para reuniones y proyectos — con WiFi, pizarra y proyección por HDMI incluidos, más el servicio de la cafetería a un piso de distancia.</p>
+    <div class="salas-grid">
+      <div class="sala-card">
+        <span class="sala-cap">2 a 4</span>
+        <p>personas</p>
+      </div>
+      <div class="sala-card">
+        <span class="sala-cap">6 a 8</span>
+        <p>personas</p>
+      </div>
+      <div class="sala-card">
+        <span class="sala-cap">10 a 12</span>
+        <p>personas</p>
+      </div>
+    </div>
+    <div class="cta-row" style="justify-content:center; margin-top:36px;">
+      <a class="btn btn-solid" href="mailto:oficinas@cafedel10.cl?subject=Reserva%20de%20sala%20-%20Caf%C3%A9%20del%2010">Reservar por correo</a>
+    </div>
+    <p class="menu-note" style="text-align:center; color:rgba(255,255,255,0.6);">oficinas@cafedel10.cl · valores a consultar según sala y horario</p>
+  </div>
+</section>
+</section>
+
+<section id="tab-resenas" class="tab-panel" data-tab-panel="resenas">
+<section id="resenas">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">lo que dicen</span>
+      <h2>649 opiniones en Google · 4.2 / 5</h2>
+    </div>
+    <div class="resenas-grid">
+      <article class="resena-card">
+        <div class="stars">★★★★★</div>
+        <p>"Lugar agradable y tranquilo en el centro de Santiago, ideal para hacer una pausa y tomar un buen café de grano. Los precios me parecen adecuados y la atención esmerada. Mi espacio favorito es el segundo piso. Lo recomiendo."</p>
+        <footer>
+          <div class="resena-avatar">XA</div>
+          <div class="resena-meta"><strong>Ximena Aguirre</strong>Local Guide · hace 2 años</div>
+        </footer>
+      </article>
+      <article class="resena-card">
+        <div class="stars">★★★★★</div>
+        <p>"Me encantó esta cafetería, por fuera no se imaginan el gran espacio que hay en el segundo piso con mucha iluminación natural. Sus sándwiches, en especial el de salmón, exquisito. Los chicos atienden muy bien y por sobre todo muy simpáticos."</p>
+        <footer>
+          <div class="resena-avatar">JQ</div>
+          <div class="resena-meta"><strong>Javier Quintanilla</strong>hace 10 meses</div>
+        </footer>
+      </article>
+      <article class="resena-card">
+        <div class="stars">★★★★★</div>
+        <p>"Muy buen ambiente, excelente atención y todo lo que probé estaba riquísimo, y qué decir del café, 10/10. Recomendado 100%."</p>
+        <footer>
+          <div class="resena-avatar">FL</div>
+          <div class="resena-meta"><strong>Fernanda Leal Stegmaier</strong>hace 10 meses</div>
+        </footer>
+      </article>
+    </div>
+    <div class="cta-row" style="justify-content:center;">
+      <a class="btn btn-solid" href="https://search.google.com/local/writereview?placeid=0x9662c5a425a40409:0xfd4a169d0e39bc5c" target="_blank" rel="noopener">★ Escribir una opinión en Google</a>
+    </div>
+  </div>
+</section>
+</section>
+
+<section id="tab-visitanos" class="tab-panel" data-tab-panel="visitanos">
+<section class="visit" id="visitanos" style="background:linear-gradient(180deg, #241f1a, var(--oxblood-dark)); color:#fff;">
+  <div class="wrap visit-grid">
+    <div>
+      <div class="section-head dark" style="text-align:left; margin-bottom:32px;">
+        <span class="eyebrow">te esperamos</span>
+        <h2>Visítanos</h2>
+      </div>
+      <div class="visit-block"><h3>Dirección</h3><p>Morandé 243, Santiago Centro, Región Metropolitana</p></div>
+      <div class="visit-block">
+        <h3>Horario</h3>
+        <p>Lunes a miércoles 7:30 a 19:45h<br>Jueves y viernes 8:00 a 19:45h<br>Sábado y domingo cerrado</p>
+        <div class="visit-pill"><span class="status-dot" id="statusDot2"></span> <span id="statusText2">Consultando horario…</span></div>
+      </div>
+      <div class="visit-block">
+        <h3>Contacto</h3>
+        <div class="contact-links">
+          <!-- PLACEHOLDER: +56 9 8794 6659 es el teléfono real registrado en Google Maps, pero no está confirmado que tenga WhatsApp activo -->
+          <a class="contact-pill" href="https://wa.me/56987946659" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2C6.478 2 2 6.478 2 12c0 1.85.505 3.633 1.457 5.191L2.06 22l4.933-1.36A9.95 9.95 0 0 0 12 22c5.523 0 10-4.477 10-10S17.524 2 12.001 2zm0 18.062a8.036 8.036 0 0 1-4.096-1.126l-.294-.175-3.05.84.827-3.017-.192-.31A8.05 8.05 0 1 1 20.05 12.05a8.05 8.05 0 0 1-8.05 8.012z"/></svg>
+            WhatsApp (no confirmado)
+          </a>
+          <a class="contact-pill" href="https://instagram.com/cafe10.cl" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            @cafe10.cl
+          </a>
+          <a class="contact-pill" href="mailto:oficinas@cafedel10.cl">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
+            oficinas@cafedel10.cl
+          </a>
+        </div>
+      </div>
+      <div class="cta-row" style="justify-content:flex-start;">
+        <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&destination=Morand%C3%A9+243,+Santiago&destination_place_id=0x9662c5a425a40409:0xfd4a169d0e39bc5c" target="_blank" rel="noopener">Cómo llegar</a>
+        <a class="btn btn-outline" style="border-color:rgba(255,255,255,0.5); color:#fff;" href="https://waze.com/ul?q=Morand%C3%A9%20243%2C%20Santiago&navigate=yes" target="_blank" rel="noopener">Ir con Waze</a>
+      </div>
+    </div>
+    <div class="map-frame">
+      <!-- Embed real generado desde la ficha de Google Maps del negocio -->
+      <iframe loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.3399157795516!2d-70.6534971!3d-33.44044960000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a425a40409%3A0xfd4a169d0e39bc5c!2sCafe%20del%2010!5e0!3m2!1ses-419!2scl!4v1788638316345!5m2!1ses-419!2scl" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+  </div>
+</section>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <img class="logo-mark footer-mark" src="fotos/logo.jpg" alt="Logo Café del 10">
+    <p class="footer-tag">Cafetería de especialidad · Santiago Centro, desde 2006</p>
+    <p class="footer-contact">Morandé 243, Santiago · <a href="mailto:oficinas@cafedel10.cl">oficinas@cafedel10.cl</a></p>
+    <div class="footer-badges">
+      <span class="badge badge-b" style="border-color:rgba(255,255,255,0.35); color:#fff; background:rgba(255,255,255,0.08);">Café tostado propio</span>
+      <span class="badge badge-b" style="border-color:rgba(255,255,255,0.35); color:#fff; background:rgba(255,255,255,0.08);">Salas de reunión</span>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-links">
+      <a href="https://instagram.com/cafe10.cl" target="_blank" rel="noopener">@cafe10.cl</a>
+      <span>·</span>
+      <span>Sitio demo diseñado con cariño</span>
+    </div>
+  </div>
+</footer>
+
+<!-- OVERLAY CARRITO -->
+<div class="overlay" id="cartOverlay">
+  <div class="cart-panel">
+    <button class="close-x" id="cartCloseBtn">&times;</button>
+    <h3>Tu pedido</h3>
+    <div id="cartLines"><p class="cart-empty">Todavía no agregaste nada.</p></div>
+    <div class="cart-total"><span>Total</span><span class="mono" id="cartTotal">A consultar</span></div>
+    <a class="btn btn-solid" style="justify-content:center; margin-top:14px;" id="checkoutBtn" href="https://wa.me/56987946659" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+  </div>
+</div>
+
+<!-- OVERLAY MODAL PRODUCTO -->
+<div class="overlay modal-overlay" id="modalOverlay">
+  <div class="modal-box">
+    <button class="close-x" id="modalCloseBtn">&times;</button>
+    <div class="modal-photo" id="modalPhoto" style="display:none;"></div>
+    <h3 id="modalName"></h3>
+    <div class="price mono" id="modalPrice"></div>
+    <p class="desc" id="modalDesc"></p>
+    <button class="btn btn-solid" style="width:100%; justify-content:center;" id="modalAddBtn">Agregar a la bolsa</button>
+  </div>
+</div>
+
+<!-- WIDGET FLOTANTE -->
+<div class="float-widget">
+  <a class="float-btn instagram" href="https://instagram.com/cafe10.cl" target="_blank" rel="noopener" aria-label="Abrir Instagram">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+  </a>
+  <a class="float-btn whatsapp" href="https://wa.me/56987946659" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2C6.478 2 2 6.478 2 12c0 1.85.505 3.633 1.457 5.191L2.06 22l4.933-1.36A9.95 9.95 0 0 0 12 22c5.523 0 10-4.477 10-10S17.524 2 12.001 2zm0 18.062a8.036 8.036 0 0 1-4.096-1.126l-.294-.175-3.05.84.827-3.017-.192-.31A8.05 8.05 0 1 1 20.05 12.05a8.05 8.05 0 0 1-8.05 8.012z"/></svg>
+  </a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
