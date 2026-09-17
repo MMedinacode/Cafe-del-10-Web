@@ -66,6 +66,71 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;0,700;1,500;1,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="pulido.css">
+
+<!-- ══════════════════════════════════════════════════════════════
+     Datos estructurados (schema.org)
+     ══════════════════════════════════════════════════════════════
+     Esto no se ve en la página: lo lee Google. Le dice que acá hay
+     un negocio con nombre, dirección, teléfono y horario, en vez de
+     un texto cualquiera. Es lo que permite salir como ficha y no
+     sólo como un resultado más.
+
+     Todo lo de abajo ya está publicado en esta misma página. Si un
+     dato no estaba, el campo simplemente no aparece. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Café del 10",
+  "description": "Café del 10. Un pedacito de Nueva York a pasos de La Moneda. 4.2★ con 649 opiniones en Google.",
+  "image": "https://mmedinacode.github.io/Cafe-del-10-Web/fotos/maquina-espresso.jpg",
+  "url": "https://mmedinacode.github.io/Cafe-del-10-Web/",
+  "telephone": "+56987946659",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Morandé 243",
+    "addressLocality": "Santiago Centro",
+    "addressRegion": "Región Metropolitana",
+    "addressCountry": "CL"
+  },
+  "sameAs": [
+    "https://instagram.com/cafe10.cl"
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Monday",
+      "opens": "07:30",
+      "closes": "19:45"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Tuesday",
+      "opens": "07:30",
+      "closes": "19:45"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Wednesday",
+      "opens": "07:30",
+      "closes": "19:45"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Thursday",
+      "opens": "08:00",
+      "closes": "19:45"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Friday",
+      "opens": "08:00",
+      "closes": "19:45"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -170,7 +235,7 @@
     </div>
     <div class="menu-tabs" id="menuTabs"></div>
     <div id="menuPanels"></div>
-    <p class="menu-note">Los precios se consultan directo en el local — todavía no tenemos una carta con tarifas confirmadas para mostrar acá.</p>
+    <p class="menu-note">Los precios se consultan en el local.</p>
   </div>
 </section>
 </section>
@@ -206,7 +271,7 @@
            a Instagram mientras no haya un contacto de reserva confirmado. -->
       <a class="btn btn-solid" href="https://instagram.com/cafe10.cl" target="_blank" rel="noopener">Reservar por Instagram</a>
     </div>
-    <p class="menu-note" style="text-align:center; color:rgba(255,255,255,0.6);">@cafe10.cl · valores a consultar según sala y horario</p>
+    <p class="menu-note" style="text-align:center; color:rgba(255,255,255,0.6);">@cafe10.cl · valores según sala y horario</p>
   </div>
 </section>
 </section>
@@ -362,5 +427,7 @@
 <script>window.REDES={"intro": "Instagram es su canal más activo para ver la carta y el ambiente del local.", "instagram": {"user": "cafe10.cl", "fotos": ["fotos/barra-cafe.jpg", "fotos/desayuno.jpg", "fotos/interior-dia.jpg"]}, "telefono": {"numero": "+56987946659"}};</script>
 <script src="redes.js"></script>
 <script src="flotantes.js"></script>
+<script src="vida.js"></script>
+<script src="pulido.js"></script>
 </body>
 </html>
