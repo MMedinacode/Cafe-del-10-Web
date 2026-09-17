@@ -12,7 +12,7 @@ const MENU = {
       { n: 'Americano' },
       { n: 'Cappuccino' },
       { n: 'Latte', img: 'fotos/barra-cafe.jpg' },
-      { n: 'Latte con Quequito de Zanahoria', d: 'Uno de los destacados reales de la casa' },
+      { n: 'Latte con Quequito de Zanahoria', d: 'Uno de los destacados de la casa' },
       { n: 'Café frapé' },
       { n: 'Agregado leche sin lactosa, soya o arroz', v: 1, d: 'Todas las preparaciones admiten cambio de leche' },
     ]}]
@@ -21,7 +21,7 @@ const MENU = {
     label: 'Pastelería',
     groups: [
       { title: 'Clásicos', items: [
-        { n: 'Golden Pie', d: 'Destacado real de la carta', img: 'fotos/vitrina.jpg' },
+        { n: 'Golden Pie', d: 'Destacado de la carta', img: 'fotos/vitrina.jpg' },
         { n: 'Medialuna Rellena Con Crema Pastelera' },
         { n: 'Donas' },
       ]},
@@ -35,7 +35,7 @@ const MENU = {
   sandwiches: {
     label: 'Sándwiches y Ensaladas',
     groups: [{ title: 'Para almorzar', items: [
-      { n: 'Sándwich de salmón', d: '"Exquisito", según reseñas reales de Google' },
+      { n: 'Sándwich de salmón', d: '"Exquisito", dicen las reseñas de Google' },
       { n: 'Sándwiches (opción vegetariana disponible)', v: 1 },
       { n: 'Ensaladas' },
     ]}]
